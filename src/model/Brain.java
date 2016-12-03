@@ -46,7 +46,7 @@ public class Brain {
 				}
 			}
 		}
-		System.out.println("I FINALLY FUCKING LEARNED IT AND I TOOK AGES BECAUSE I'M STUPID");
+		System.out.println("YAY I FINALLY FUCKING LEARNED IT AND IT TOOK AGES BECAUSE I'M STUPID");
 	}
 
 	public void learn(double fnet, int iteration) {

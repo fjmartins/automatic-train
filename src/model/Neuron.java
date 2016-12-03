@@ -1,13 +1,12 @@
 package model;
 
-import java.util.List;
 import java.util.Random;
 
 public class Neuron {
 
 	private Double[] inputs;
 	private Double[] weights;
-	private Double net = 0d;
+	private Double net;
 
 	public Neuron(int input_length) {
 		weights = new Double[input_length + 1];
