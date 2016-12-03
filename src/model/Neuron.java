@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Random;
+import util.Util;
 
 public class Neuron {
 
@@ -12,7 +12,7 @@ public class Neuron {
 		weights = new Double[input_length + 1];
 
 		for (int i = 0; i < weights.length; i++) {
-			weights[i] = new Random().nextGaussian();
+			weights[i] = Util.randDouble(0.5);
 		}
 	}
 

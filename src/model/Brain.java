@@ -20,7 +20,7 @@ public class Brain {
 
 	public void think() {
 		int stop = 0;
-		while (stop < 4) {			
+		while (stop < 3) {			
 			for (int i = 0; i < this.inputs.length; i++) {
 				List<Double> inputs = new ArrayList<Double>();
 				inputs.add(new Double(threshold));
@@ -46,13 +46,13 @@ public class Brain {
 				}
 			}
 		}
-		System.out.println("YAY I FINALLY FUCKING LEARNED IT AND IT TOOK AGES BECAUSE I'M STUPID");
+		System.out.println("YAY I FINALLY FUCKING LEARNED IT");		
 	}
 
 	public void learn(double fnet, int iteration) {
 		for (int j = 0; j < neuron.getWeights().length; j++) {
 			neuron.getWeights()[j] = neuron.getWeights()[j] + alpha
-					* (fnet - desired_outputs[iteration]) * neuron.getInputs()[j];
+					* (desired_outputs[iteration] - fnet) * neuron.getInputs()[j];
 		}
 	}
 
